@@ -17,4 +17,5 @@ result
 model
 -----
 You can also try my models here:
-https://pan.baidu.com/s/15Juub8f7gaBN826QuGGo8Q
+Google Drive: https://drive.google.com/drive/folders/1WREzoYmwzw0gOpfobty3quySJaTDAXUi?usp=sharing
+Baidu Cloud: https://pan.baidu.com/s/15Juub8f7gaBN826QuGGo8Q

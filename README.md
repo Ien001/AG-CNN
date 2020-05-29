@@ -1,8 +1,6 @@
 Diagnose like a Radiologist: Attention Guided Convolutional Neural Network for Thorax Disease Classification
 ======
-This is a reimplementation of paper :  Diagnose like a Radiologist: Attention Guided Convolutional Neural Network for Thorax Disease Classification (AG-CNN)
-
-*Recently, the paper was accpeted in PRL 2020 with title "Thorax disease classification with attention guided convolutional neural network"*
+This is a reimplementation of paper :  Diagnose like a Radiologist: Attention Guided Convolutional Neural Network for Thorax Disease Classification (AG-CNN). Recently, the paper was accpeted in PRL 2020 with title: Thorax disease classification with attention guided convolutional neural network
 
 In this repo, you can train & test your own models, more details are shown in the code.
 

@@ -1,7 +1,8 @@
 # encoding: utf-8
-
 """
-The main CheXNet model implementation.
+Training implementation
+Author: Ian Ren
+Update time: 08/11/2020
 """
 import re
 import sys
@@ -36,12 +37,14 @@ N_CLASSES = 14
 CLASS_NAMES = [ 'Atelectasis', 'Cardiomegaly', 'Effusion', 'Infiltration', 'Mass', 'Nodule', 'Pneumonia',
                 'Pneumothorax', 'Consolidation', 'Edema', 'Emphysema', 'Fibrosis', 'Pleural_Thickening', 'Hernia']
 
-DATA_DIR = '/media/renyz/data8g/CXR8/images'
+# load with your own dataset path
+DATA_DIR = '/media/xxxx/data/xxxx/images'
 TRAIN_IMAGE_LIST = '/labels/train_list.txt'
 VAL_IMAGE_LIST = '/labels/val_list.txt'
 save_model_path = '/model-AG-CNN/'
 save_model_name = 'AG_CNN'
 
+# learning rate
 LR_G = 1e-8
 LR_L = 1e-8
 LR_F = 1e-3
@@ -61,7 +64,7 @@ preprocess = transforms.Compose([
 
 
 def Attention_gen_patchs(ori_image, fm_cuda):
-    # fm => mask =>(+ ori-img) => crop = patchs
+    # feature map -> feature mask (using feature map to crop on the original image) -> crop -> patchs
     feature_conv = fm_cuda.data.cpu().numpy()
     size_upsample = (224, 224) 
     bz, nc, h, w = feature_conv.shape
